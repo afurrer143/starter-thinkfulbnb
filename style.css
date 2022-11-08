@@ -141,7 +141,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
 /* format header on desktop */
   header{
     display: flex;
@@ -189,6 +189,7 @@ footer p {
     flex: 1;
     /* margin: 10px; */
     align-content: center;
+    align-items: center;
     /* border: 3px solid rgb(77, 10, 246); */
   }
   
@@ -196,10 +197,14 @@ footer p {
     flex: 2;
   }
 
+  .horizontal-align{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* CURRENT PROBLEM I AM WORKING
-THE HECKING ABOUT WANTS 2 IMAGES ON EACH ROW
-BUT STUPID THING IS SET SO IT WILL ONLY DO 1 ROW AND IT AUTO ADJUSTS TO MAKE THEM FIT
-ANDITWEOPT22 4Y634Y34Y3
+HORIZONTAL CENTER THE HOST TEXT
 */
