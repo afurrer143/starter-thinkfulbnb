@@ -101,17 +101,20 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display:flex;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
-form label {
+form label {  
   font-weight: bold;
+  /* border:2px solid green */
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
+  /* border:solid 3px rgb(19, 91, 215); */
+  margin-bottom: 0px;
   width: 180px;
 }
 
