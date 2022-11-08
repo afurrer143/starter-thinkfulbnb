@@ -164,7 +164,7 @@ footer p {
   }
 
   .group{
-    border: solid 3px red;
+    /* border: solid 3px red; */
     margin: 0px 7px 0px 7px;
     display: flex;
     flex-direction: row;
@@ -177,13 +177,9 @@ footer p {
     width: 25%;
   }
 
-  #ideas .group img {
+  #ideas .group img{
     width:100%;
-    border: 3px solid blue;
-  }
-
-  .row-1{
-    flex: 200%;
+    /* border: 3px solid blue; */
   }
 
   .item {
@@ -197,5 +193,10 @@ footer p {
     flex: 2;
   }
 
-
 }
+
+/* CURRENT PROBLEM I AM WORKING
+THE HECKING ABOUT WANTS 2 IMAGES ON EACH ROW
+BUT STUPID THING IS SET SO IT WILL ONLY DO 1 ROW AND IT AUTO ADJUSTS TO MAKE THEM FIT
+ANDITWEOPT22 4Y634Y34Y3
+*/
