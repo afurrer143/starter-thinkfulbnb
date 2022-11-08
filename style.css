@@ -5,20 +5,21 @@ body {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
+  font-size: 19px;
 }
 
 section {
@@ -31,24 +32,28 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
+  margin: 0px 7px 0px 7px;
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  gap:25px
+  /* border: 3px solid blue */
 }
 
 .item {
   flex: 1;
-  margin: 10px;
+  /* margin: 10px; */
+  justify-content: center;
+  /* border: 3px solid red; */
 }
 
-.item-double {
-  flex: 2;
-}
+
 
 /* -------  Navigation ------- */
 
@@ -64,14 +69,29 @@ header {
   color: #fff;
 }
 
-header nav ul li {
+header nav{
+  display: flex;
+  justify-content:center;
+  /* border: 3px solid rgb(43, 43, 237); */
+}
+
+header nav ul {
+  display:flex;
+  justify-content: space-between;
   list-style-type: none;
+  /* comment border */
+  /* border: 3px solid red; */
+  /* by default list has a decent chunk of padding to the left */
+  padding-left: 0;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  font-size: 19px;
+  /* comment border */
+  /* border: 3px solid rgb(93, 0, 255); */
 }
 
 header nav ul li a:hover {
@@ -117,3 +137,65 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+/* format header on desktop */
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px
+  }
+
+  header .logo{
+    margin:12px 0px
+  }
+
+  header nav{
+    margin-top: 20px;
+  }
+
+  header nav ul li a{
+    font-size: 22px;
+  }
+
+/* format the groups and images */
+  p{
+    font-size: 17px;
+  }
+
+  .group{
+    border: solid 3px red;
+    margin: 0px 7px 0px 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px
+  }
+
+  #about .group img {
+    /* if set to 100% as it was before, the image would take up the entire width of its container (that being the flex box it is in */
+    width: 25%;
+  }
+
+  #ideas .group img {
+    width:100%;
+    border: 3px solid blue;
+  }
+
+  .row-1{
+    flex: 200%;
+  }
+
+  .item {
+    flex: 1;
+    /* margin: 10px; */
+    align-content: center;
+    /* border: 3px solid rgb(77, 10, 246); */
+  }
+  
+  .item-double {
+    flex: 2;
+  }
+
+
+}
