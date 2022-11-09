@@ -36,37 +36,57 @@
       <section id="stay">
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
-        <form class="group">
-          <div class="item">
-            <label for="location">Location</label>
-            <input
-              type="text"
-              name="location"
-              id="location"
-              placeholder="Search Destination"
-              class="align-right"
-            />
+        <form>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="location">Location</label>
+              <input
+                type="text"
+                name="location"
+                id="location"
+                placeholder="Search Destination"
+                class="align-right"
+              />
+            </div>
           </div>
-          <div class="item">
-            <label for="arrive-date">Arrive</label>
-            <input type="date" name="arrive-date" id="arrive-date" class="align-right"/>
+          <div class="form-group">           
+            <div class="form-item">
+              <label for="arrive-date">Arrive</label>
+              <input
+                type="date"
+                name="arrive-date"
+                id="arrive-date"
+                class="align-right"
+              />
+            </div>
           </div>
-          <div class="item">
-            <label for="depart-date">Depart</label>
-            <input type="date" name="depart-date" id="depart-date" class="align-right"/>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="depart-date">Depart</label>
+              <input
+                type="date"
+                name="depart-date"
+                id="depart-date"
+                class="align-right"
+              />
+            </div>
           </div>
-          <div class="item">
-            <label for="staying-type">Type</label>
-            <select name="staying-types" id="staying-types" class="align-right">
-              <option value="apartment">Apartment</option>
-              <option value="barn">Barn</option>
-              <option value="castle">Castle</option>
-              <option value="houseboat">Houseboat</option>
-              <option value="tiny-house">Tiny House</option>
-              <option value="yacht">Yacht</option>
-              <option value="yurt">Yurt</option>
-            </select>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="staying-type">Type</label>
+              <select name="staying-types" id="staying-types" class="align-right">
+                <option value="apartment">Apartment</option>
+                <option value="barn">Barn</option>
+                <option value="castle">Castle</option>
+                <option value="houseboat">Houseboat</option>
+                <option value="tiny-house">Tiny House</option>
+                <option value="yacht">Yacht</option>
+                <option value="yurt">Yurt</option>
+              </select>
+            </div>
           </div>
+          <!-- THE BUTTON PROBABLY NEEDS ITS OWN DIV IDK YET -->
+
           <div class="item">
             <button type="submit">Search</button>
           </div>
