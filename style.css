@@ -5,25 +5,30 @@ body {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 8vw;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin-bottom: 1vh;
+  margin-top: 9px;
   text-align: center;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 6vw;
   font-weight: 500;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
-  font-size: 19px;
+  font-size: 4vw;
+}
+
+ul li {
+  font-size: 4vw;
 }
 
 section {
-  padding: 20px;
+  padding: 0px;
 }
 
 section.alternate-background {
@@ -48,6 +53,8 @@ main img {
 
 .item {
   flex: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
   /* margin: 10px; */
   justify-content: center;
   /* border: 3px solid red; */
@@ -55,13 +62,12 @@ main img {
 
 .form-group{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   gap:10px;
-  border:2px solid rgb(197, 2, 80) 
+  /* border:2px solid rgb(197, 2, 80)  */
 }
 
 .form-item{
-  display:flex;
   
 }
 
@@ -70,13 +76,14 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 0px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 48px;
+  font-size: 15vw;
   color: #fff;
 }
 
@@ -99,45 +106,60 @@ header nav ul {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  /* adds 20px of padding to right and removes other padding */
   padding: 0 20px 0 0;
-  font-size: 19px;
+  font-size: 4vw;
   /* comment border */
   /* border: 3px solid rgb(93, 0, 255); */
 }
+
 
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
 
+header nav ul li:last-child a {
+  /* Removes the margin to the right of the last anchor tag 
+     so that the nav appears centered. */
+  margin-right: 0;
+  padding-right: 0;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 5px;
+  
+
 }
 /* I need the form and the form label to be flexxed
 and then I can use space-between so one will be left and one will be right */
 form label {  
   font-weight: bold;
-  border:2px solid green
+  font-size: 4vw;
+  /* border:2px solid green */
 }
 
 form select,
 form input {
-  border:solid 3px rgb(19, 91, 215);
+  display:flex;
+  /* border:solid 3px rgb(19, 91, 215); */
+  font-size: 4vw;
   margin-bottom: 0px;
-  width: 150px;
+  width: 100%;
+  
 }
 
 form button {
-  display:flex;
-  justify-content: center;
+  /* display:flex;
+  justify-content: center; */
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 20px;
   padding: 0px;
   width: 100%;
+  border-radius: 5%;
 }
 
 /* -------  Footer ------- */
@@ -149,7 +171,7 @@ footer {
 footer p {
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 3px;
 }
 
 /* -------  Media Query ------- */
@@ -159,26 +181,55 @@ footer p {
   header{
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px
+    justify-items: center;
+    padding: 0px 20px;
   }
 
-  header .logo{
+  h2{
+    font-size: 3vw;
+  }
+
+  h3{
+    font-size: 2vw;
+  }
+
+  p{
+    font-size: 1vw;
+  }
+
+  ul li {
+    font-size: 1.5vw;
+  }
+  form{
+    display:flex;
+    justify-content: space-between;
+  }
+
+  form label{
+    font-size: 1.5vw;
+  }
+
+  form select,
+  form input {
+    font-size: 1.5vw;
+  }
+
+  .logo{
     margin:12px 0px;
-    font-size: 40px;
+    font-size: 4vw;
   }
 
   header nav{
-    margin-top: 20px;
+    display: flex;
+    justify-items: center;
   }
 
   header nav ul li a{
-    font-size: 20px;
+    font-size: 1.5vw;
   }
 
 /* format the groups and images */
-  p{
-    font-size: 17px;
-  }
+
 
   .group{
     /* border: solid 3px red; */
@@ -187,6 +238,10 @@ footer p {
     flex-direction: row;
     flex-wrap: wrap;
     gap:10px
+  }
+
+  .form-group{
+    flex:1;
   }
 
   #about .group img {
@@ -204,18 +259,12 @@ footer p {
     /* margin: 10px; */
     align-content: center;
     align-items: center;
+    margin-bottom: 5px;
     /* border: 3px solid rgb(77, 10, 246); */
   }
   
   .item-double {
     flex: 2;
-  }
-
-  .horizontal-align{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 }
 
